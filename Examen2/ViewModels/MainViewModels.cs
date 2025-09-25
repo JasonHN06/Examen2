@@ -33,13 +33,13 @@ namespace Examen2.ViewModels
         {
             try
             {
-                double p1 = string.IsNullOrWhiteSpace(producto1) ? 0 : Convert.ToDouble(producto1);
-                double p2 = string.IsNullOrWhiteSpace(producto2) ? 0 : Convert.ToDouble(producto2);
-                double p3 = string.IsNullOrWhiteSpace(producto3) ? 0 : Convert.ToDouble(producto3);
+                double p1 = string.IsNullOrWhiteSpace(Producto1) ? 0 : Convert.ToDouble(Producto1);
+                double p2 = string.IsNullOrWhiteSpace(Producto2) ? 0 : Convert.ToDouble(Producto2);
+                double p3 = string.IsNullOrWhiteSpace(Producto3) ? 0 : Convert.ToDouble(Producto3);
 
-                subtotal = p1 + p2 + p3;
-                descuento = ObtenerDescuento(subtotal);
-                total = subtotal - (subtotal * descuento / 100);
+                Subtotal = p1 + p2 + p3;
+                Descuento = ObtenerDescuento(Subtotal);
+                Total = Subtotal - (Subtotal * Descuento / 100);
             }
             catch (Exception ex)
             {
@@ -58,8 +58,8 @@ namespace Examen2.ViewModels
         [RelayCommand]
         public void Limpiar()
         {
-            producto1 = producto2 = producto3 = string.Empty;
-            subtotal = descuento = total = 0;
+            Producto1 = Producto2 = Producto3 = string.Empty;
+            Subtotal = Descuento = Total = 0;
         }
     }
 }
