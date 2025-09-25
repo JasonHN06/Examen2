@@ -21,7 +21,7 @@
             <Label Text="{Binding Descuento, StringFormat='{0}%'}" />
 
             <Label Text="Total a Pagar: "/>
-            <Label Text="{Binding TotalPagar, StringFormat='L{0:N2}'}" />
+            <Label Text="{Binding Total, StringFormat='L{0:N2}'}" />
 
             <Button Text="Calcular" Command="{Binding CalcularCommand}" />
             <Button Text="Limpiar" Command="{Binding LimpiarCommand}" BackgroundColor="White" />
